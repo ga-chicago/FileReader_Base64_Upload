@@ -1,0 +1,27 @@
+{
+  "name": "FileReader_Base64_Upload",
+  "version": "1.0.0",
+  "description": "Demo project",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ga-chicago/FileReader_Base64_Upload.git"
+  },
+  "keywords": [
+    "javascript",
+    "base64",
+    "upload",
+    "tutorial",
+    "filereader",
+    "api"
+  ],
+  "author": "code-for-coffee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ga-chicago/FileReader_Base64_Upload/issues"
+  },
+  "homepage": "https://github.com/ga-chicago/FileReader_Base64_Upload"
+}
