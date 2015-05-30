@@ -6,18 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Uploading Images as Base 64 via File Reader</title>
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- load icon font -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <!-- load MUI -->
     <link href="//cdn.muicss.com/mui-0.1.4/css/mui.min.css" rel="stylesheet" type="text/css" />
-    <script src="//cdn.muicss.com/mui-0.1.4/js/mui.min.js"></script>
+    <script src="//cdn.muicss.com/mui-0.1.4/js/mui.min.js"></script>    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
 </head>
 <body>
 <!-- example content -->
 <div class="mui-container">
     <div class="mui-panel">
-        <h1>Step 1: Build the form</h1>
-        <p></p>
-        <button class="mui-btn mui-btn-primary mui-btn-raised">My Button</button>
+
+        <h1><i class="fa fa-cloud-upload"></i> Uploading Images as Base 64 via File Reader</h1>
+
+        <h2>Step 1: Build the form</h2>
+
+        <h3>Included in our form</h3>
+        <ul>
+            <li>Action: <code>/api/photo</code></li>
+            <li>Method: <code>post</code></li>
+            <li>A <code>file</code> input type. It has the <code>name</code> attribute</li>
+        </ul>
+
+        <h3>Code</h3>
+        <script src="https://gist.github.com/code-for-coffee/802b237f684fb6cdad96.js"></script>
+
+        <h3>Result</h3>
+        <form action="/api/photo" method="post"></form>
+            <h3>Upload Image</h3>
+            <input type="file" name="image" class="mui-form-control">
+            <button class="mui-btn mui-btn-primary mui-btn-raised">Upload</button>
+        </form>
+
     </div>
 </div>
+<script type="text/javascript">
+    $(document).ready(function(event) {
+        // select our input DOM element with a type of file
+        var fileInput = $('input[type="file"]')[0];
+
+        // select our form, too
+        var form = $('form')[0];
+
+        // prevent our form from submitting via POSTBACK
+        $(form).on('submit', function(event) {
+           event.preventDefault();
+
+        });
+    });
+</script>
 </body>
 </html>
